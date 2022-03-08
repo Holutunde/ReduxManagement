@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
-function App() {
+import { useSelector } from 'react-redux'
+
+const App = () => {
+  const counter = useSelector((state) => state.counter)
+  const isLogged = useSelector((state) => state.isLogged)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h3>The number of press is {counter}</h3>
+      {isLogged ? <h1>OLUTUNDE</h1> : <h2>SOKUNBI</h2>}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
