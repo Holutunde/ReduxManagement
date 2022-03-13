@@ -1,17 +1,16 @@
 import { ActionTypes } from '../constants/action-types'
 
 const initialState = {
-  products: [
-    {
-      id: 1,
-      title: "'",
-    },
-  ],
+  products: [],
 }
 const productReducer = (state = initialState, { type, payload }) => {
+  //The payload will be updated by the data received from the server
   switch (type) {
-    case ActionTypes.SELECTED_PRODUCTS:
-      return state
+    case ActionTypes.SET_PRODUCTS:
+      return {
+        ...state,
+        products: payload,
+      }
     default:
       return state
   }

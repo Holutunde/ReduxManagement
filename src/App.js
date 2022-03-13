@@ -1,14 +1,19 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Header from './containers/Header';
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Header from './containers/Header'
+import ProductDetail from './containers/ProductDetail'
+import ProductListing from './containers/ProductListing'
 
 const App = () => {
   return (
     <div className="App">
       <Router>
-        
+        <Routes>
+          <Route path="/" element={<ProductListing />} />
+          <Route path="/product/:productId" element={<ProductDetail />} />
+          <Route>404 Not Found</Route>
+        </Routes>
       </Router>
-      <Header />
     </div>
   )
 }
