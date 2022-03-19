@@ -8,6 +8,7 @@ const App = () => {
   return (
     <div className="App">
       <Router>
+        <Header />
         <Routes>
           <Route path="/" element={<ProductListing />} />
           <Route path="/product/:productId" element={<ProductDetail />} />

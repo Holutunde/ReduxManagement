@@ -6,8 +6,10 @@ import ProductComponent from './ProductComponent'
 import { setProducts } from '../redux/actions/productAction'
 
 const ProductListing = () => {
-  const { products } = useSelector((state) => state.allProducts)
-  console.log(products[3])
+  const { products } = useSelector((state) => state.allProduct)
+
+  console.log(products)
+
   const dispatch = useDispatch()
   const fetchProducts = async () => {
     const response = await axios
