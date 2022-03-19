@@ -2,6 +2,7 @@ import { ActionTypes } from '../constants/action-types'
 
 const initialState = {
   products: [],
+  press: null,
 }
 const productReducer = (state = initialState, { type, payload }) => {
   //The payload will be updated by the data received from the server
