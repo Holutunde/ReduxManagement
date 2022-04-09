@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-
+//Display Component
 const ProductComponent = () => {
   const { products } = useSelector((state) => state.allProduct)
   const renderList = products.map((product) => {
