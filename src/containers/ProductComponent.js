@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 //Display Component
 const ProductComponent = () => {
   const { products } = useSelector((state) => state.allProduct)
+  console.log(products)
   const renderList = products.map((product) => {
     const { id, title, image, price, category } = product
     return (
@@ -13,9 +14,7 @@ const ProductComponent = () => {
               <img src={image} alt={title} />
             </div>
             <div className="content">
-              <div className="header" style={{ marginTop: '100' }}>
-                {title}
-              </div>
+              <div className="header">{title}</div>
               <div className="meta price">$ {price}</div>
               <div className="meta">{category}</div>
             </div>
