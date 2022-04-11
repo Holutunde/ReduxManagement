@@ -2,11 +2,11 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <div className="ui fixed menu">
-      <div className="ui container center">
-        <h2>FakeShop</h2>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">Fake Shop</span>
       </div>
-    </div>
+    </nav>
   )
 }
 
